@@ -28,20 +28,14 @@ body {
     position: relative;
     box-shadow: 0 0 20px rgba(0,0,0,0.08);
     
-    /* 1. Amankan teks di sebelah kiri agar tidak menabrak bunga yang melebar */
-    padding: 60px 160px 60px 24px; 
+    /* 1. PADDING UNTUK DESKTOP/LAPTOP: Amankan teks dari bunga */
+    padding: 60px 150px 60px 24px; 
     
-    /* 2. Panggil file bunga kamu */
     background-image: url('bunga-kanan.png'); 
     
-    /* 3. ATUR UKURAN: Buat ukurannya jauh lebih besar agar proporsinya pas */
-    background-size: 500px auto; 
-    
-    /* 4. GESER KE KIRI: Kita kunci posisi atas (top), lalu geser kanan (right) sebesar -40px 
-          Angka minus ini gunanya untuk menarik 'sisi putih' gambar Canva keluar dari frame HP, 
-          sehingga rumpun bunganya otomatis bergeser lebih masuk ke kiri */
-    background-position: right -40px top 0px;
-    
+    /* 2. UKURAN UNTUK DESKTOP/LAPTOP: Disesuaikan agar proporsional */
+    background-size: 180px auto; 
+    background-position: right 0px top 0px;
     background-repeat: repeat-y;              
     background-attachment: scroll;
 }
@@ -336,17 +330,14 @@ body {
 .music-btn {
     position: fixed;
     bottom: 25px;
-    
-    /* MENGUNCI POSISI DI SEBELAH KANAN FRAME HP */
-    left: calc(50% + 150px); /* Bergeser ke kanan mengikuti batas luar frame 450px */
-    
+    left: calc(50% + 150px); /* Posisi di desktop */
     width: 45px;
     height: 45px;
-    background-color: rgba(122, 34, 20, 0.85); /* Warna terracotta transparan mewah */
+    background-color: rgba(122, 34, 20, 0.85);
     color: #FFFFFF;
     border: none;
     border-radius: 50%;
-    display: none; /* Muncul otomatis setelah klik 'Buka Undangan' */
+    display: none;
     justify-content: center;
     align-items: center;
     font-size: 1.1rem;
@@ -360,7 +351,6 @@ body {
     transform: scale(0.9);
 }
 
-/* Animasi putar lembut saat lagu menyala */
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
@@ -370,10 +360,21 @@ body {
     animation: spin 4s linear infinite;
 }
 
-/* KUNCI KHUSUS TAMPILAN HP ASLI */
+/* ==========================================================================
+   KUNCI UTAMA: KHUSUS TAMPILAN SAAT DIBUKA DI HP ASLI (MAX-WIDTH: 450PX)
+   ========================================================================== */
 @media (max-width: 450px) {
+    .mobile-wrapper {
+        /* Di HP, porsi bunga kita perkecil jadi 30% dari lebar layar agar tidak maruk tempat */
+        background-size: 30% auto;
+        background-position: right 0 top 0;
+        
+        /* Padding kanan diturunkan jadi 35% supaya teks punya ruang luas di sebelah kiri */
+        padding: 40px 35% 40px 20px; 
+    }
+
     .music-btn {
-        left: auto;    /* Matikan kalkulasi desktop */
-        right: 20px;   /* Langsung mengunci 20px dari kanan layar HP tamu */
+        left: auto;    
+        right: 20px; /* Tombol musik mengunci di kanan bawah layar HP */
     }
 }
