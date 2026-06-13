@@ -46,17 +46,19 @@ body {
 #gate-overlay {
     position: fixed;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0; /* Ubah ke 0 jika ingin full screen */
     width: 100%;
-    max-width: 450px;
     height: 100vh;
-    background-color: #FFFFFF; /* Putih polos total di awal */
+    background-color: #FFFFFF;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 100;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
+    z-index: 1000;
+    transition: all 0.8s ease-in-out; /* Ini yang bikin animasinya halus */
+}
+
+.content-hidden {
+    display: none !important;
 }
 
 .open-btn {
@@ -76,6 +78,7 @@ body {
 #gate-overlay.fade-out {
     opacity: 0;
     visibility: hidden;
+    transform: translateY(-100%); /* Gerbang terangkat ke atas pelan-pelan */
 }
 
 .content-hidden {

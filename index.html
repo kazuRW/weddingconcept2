@@ -24,13 +24,11 @@
         
         <section class="cover-section">
             <p class="upper-title">OUR WEDDING</p>
-            
             <div class="main-names">
                 <h1 class="serif-name">Firdan Kawulur</h1>
-                <div class="ampersand">&amp;</div>
+                <div class="ampersand">&</div>
                 <h1 class="serif-name">Cicilya Dhana Monica</h1>
             </div>
-            
             <div class="save-the-date-box">
                 <p class="std-text">Save the Date</p>
                 <div class="date-container">
@@ -39,7 +37,6 @@
                     <div class="date-element">2026</div>
                 </div>
             </div>
-            
             <div class="guest-area">
                 <p class="dear-text">Dear Mr. and Mrs.</p>
                 <div class="guest-box">
@@ -57,15 +54,9 @@
             <div class="parents-info">
                 <p class="section-sub">Parents and entire bride:</p>
                 <div class="parents-row">
-                    <div>
-                        <strong>Firdan Kawulur</strong><br>
-                        Groom &amp; Keluarga
-                    </div>
-                    <div class="amp-small">&amp;</div>
-                    <div>
-                        <strong>Cicilya Dhana Monica</strong><br>
-                        Bride &amp; Keluarga
-                    </div>
+                    <div><strong>Firdan Kawulur</strong><br>Groom & Keluarga</div>
+                    <div class="amp-small">&</div>
+                    <div><strong>Cicilya Dhana Monica</strong><br>Bride & Keluarga</div>
                 </div>
             </div>
 
@@ -73,28 +64,18 @@
                 <div class="event-column">
                     <h3>Pemberkatan</h3>
                     <p class="event-time">08:00 - 10:00 WIB</p>
-                    <p class="event-loc">
-                      GPdI Air Siloam<br>
-                      Kota Wisata<br>
-                      <span class="map-link" onclick="window.open('https://maps.app.goo.gl/4z1REgGjN1ia4ksA7', '_blank')">Location Map</span>
-                    </p>
+                    <p class="event-loc">GPdI Air Siloam<br>Kota Wisata<br><span class="map-link" onclick="window.open('https://maps.app.goo.gl/4z1REgGjN1ia4ksA7', '_blank')">Location Map</span></p>
                     <div class="qr-placeholder">
-                        <div class="qr-placeholder">
-                          <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://maps.app.goo.gl/4z1REgGjN1ia4ksA7" alt="QR Lokasi Pemberkatan">
-                        </div>
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://maps.app.goo.gl/4z1REgGjN1ia4ksA7" alt="QR Lokasi Pemberkatan">
                     </div>
                 </div>
                 
                 <div class="event-column border-left">
                     <h3>Resepsi</h3>
                     <p class="event-time">12:00 - 14:00 WIB</p>
-                    <p class="event-loc">
-                      Bakmi Golk<br>
-                      Ball Room<br>
-                      <span class="map-link" onclick="window.open('https://maps.app.goo.gl/GgmjUKVHEWFMhPXk6', '_blank')">Location Map</span>
-                    </p>
+                    <p class="event-loc">Bakmi Golek<br>Ball Room<br><span class="map-link" onclick="window.open('https://maps.app.goo.gl/GgmjUKVHEWFMhPXk6', '_blank')">Location Map</span></p>
                     <div class="qr-placeholder">
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://maps.app.goo.gl/GgmjUKVHEWFMhPXk6" alt="QR Lokasi">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://maps.app.goo.gl/GgmjUKVHEWFMhPXk6" alt="QR Lokasi Resepsi">
                     </div>
                 </div>
             </div>
@@ -102,32 +83,25 @@
             <div class="footer-sections">
                 <h3 class="serif-sub">Love Story</h3>
                 <p class="placeholder-text">[ Area Galeri Foto ]</p>
-                
                 <h3 class="serif-sub">Wedding Gift</h3>
-                <p class="placeholder-text">Wishes &amp; RSVP</p>
-                
+                <p class="placeholder-text">Wishes & RSVP</p>
                 <div class="rsvp-box">
                     <p class="rsvp-label">Name</p>
                     <div class="rsvp-line"></div>
                 </div>
-
                 <div class="closing-area">
                     <p class="closing-label">Cordial Closing</p>
-                    <h2 class="footer-names">Firdan &amp; Cicilya</h2>
+                    <h2 class="footer-names">Firdan & Cicilya</h2>
                 </div>
             </div>
         </section>
-
     </div>
-    </section>
-</div>
 
-<audio id="wedding-music" src="Happy Ending.mp3" loop></audio>
+    <audio id="wedding-music" src="Happy Ending.mp3" loop></audio>
+    <button id="music-control" class="music-btn" onclick="toggleMusic()">
+        <i id="music-icon" class="fas fa-music"></i>
+    </button>
 
-<button id="music-control" class="music-btn" onclick="toggleMusic()">
-    <i id="music-icon" class="fas fa-music"></i>
-</button>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

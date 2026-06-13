@@ -1,4 +1,3 @@
-// Ambil elemen HTML yang dibutuhkan
 const music = document.getElementById('wedding-music');
 const musicBtn = document.getElementById('music-control');
 const musicIcon = document.getElementById('music-icon');
@@ -6,37 +5,33 @@ const musicIcon = document.getElementById('music-icon');
 function openInvitation() {
     const gateOverlay = document.getElementById('gate-overlay');
     const mainContent = document.getElementById('main-content');
+    const music = document.getElementById('wedding-music');
+    const musicBtn = document.getElementById('music-control');
+    const musicIcon = document.getElementById('music-icon');
 
-    // 1. Hilangkan gerbang pembuka
-    gateOverlay.classList.add('fade-out');
-
-    // 2. Munculkan konten utama undangan
+    // Munculkan konten di balik pintu
     mainContent.classList.remove('content-hidden');
 
-    // 3. Tampilkan tombol musik melayang & otomatis putar lagunya
+    // Jalankan animasi belah pintu
+    gateOverlay.classList.add('fade-out');
+
+    // Putar musik
     musicBtn.style.display = 'flex';
-    music.play().catch(error => {
-        console.log("Autoplay dicegah oleh browser, musik akan menyala setelah interaksi berikutnya.");
-    });
-    
-    // Berikan efek berputar pada ikon musik saat aktif
+    music.play().catch(e => console.log("User interaction required for music."));
     musicIcon.classList.add('music-spin');
 
-    // 4. Singkirkan elemen gerbang setelah transisi selesai
+    // Hapus gerbang setelah pintu terbuka penuh (1.2 detik)
     setTimeout(() => {
         gateOverlay.style.display = 'none';
-    }, 500);
+    }, 1200); 
 }
 
-// Fungsi tombol untuk Mematikan atau Menyalakan lagu secara manual
 function toggleMusic() {
     if (music.paused) {
         music.play();
-        musicIcon.classList.add('music-spin');
-        musicIcon.className = "fas fa-music music-spin"; // Ikon tangga nada
+        musicIcon.className = "fas fa-music music-spin";
     } else {
         music.pause();
-        musicIcon.classList.remove('music-spin');
-        musicIcon.className = "fas fa-volume-mute"; // Berubah jadi ikon mute jika dimatikan
+        musicIcon.className = "fas fa-volume-mute";
     }
 }
