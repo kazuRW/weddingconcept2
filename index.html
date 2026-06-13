@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wedding of Firdan & Cicilya</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="gate-overlay">
+        <button class="open-btn" onclick="openInvitation()">
+            <i class="fas fa-envelope-open"></i> Buka Undangan
+        </button>
+    </div>
+
+    <div id="main-content" class="mobile-wrapper content-hidden">
+        
+        <section class="cover-section">
+            <p class="upper-title">OUR WEDDING</p>
+            
+            <div class="main-names">
+                <h1 class="serif-name">Firdan Kawulur</h1>
+                <div class="ampersand">&amp;</div>
+                <h1 class="serif-name">Cicilya Dhana Monica</h1>
+            </div>
+            
+            <div class="save-the-date-box">
+                <p class="std-text">Save the Date</p>
+                <div class="date-container">
+                    <div class="date-element">JULY</div>
+                    <div class="date-element big-date">25</div>
+                    <div class="date-element">2026</div>
+                </div>
+            </div>
+            
+            <div class="guest-area">
+                <p class="dear-text">Dear Mr. and Mrs.</p>
+                <div class="guest-box">
+                    <span class="guest-name">(Nama Tamu)</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="details-section">
+            <p class="quote-text">
+                "Demikianlah mereka bukan lagi dua, melainkan satu. Sebab itu, apa yang telah dipersatukan Allah, tidak boleh diceraikan manusia."
+            </p>
+            <p class="quote-ref">MATIUS 19 : 6</p>
+
+            <div class="parents-info">
+                <p class="section-sub">Parents and entire bride:</p>
+                <div class="parents-row">
+                    <div>
+                        <strong>Firdan Kawulur</strong><br>
+                        Groom &amp; Keluarga
+                    </div>
+                    <div class="amp-small">&amp;</div>
+                    <div>
+                        <strong>Cicilya Dhana Monica</strong><br>
+                        Bride &amp; Keluarga
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-grid">
+                <div class="event-column">
+                    <h3>Pemberkatan</h3>
+                    <p class="event-time">08:00 - 10:00 WIB</p>
+                    <p class="event-loc">
+                      GPdI Air Siloam<br>
+                      Kota Wisata<br>
+                      <span class="map-link" onclick="window.open('https://maps.app.goo.gl/4z1REgGjN1ia4ksA7', '_blank')">Location Map</span>
+                    </p>
+                    <div class="qr-placeholder">
+                        <div class="qr-placeholder">
+                          <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://maps.app.goo.gl/4z1REgGjN1ia4ksA7" alt="QR Lokasi Pemberkatan">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="event-column border-left">
+                    <h3>Resepsi</h3>
+                    <p class="event-time">12:00 - 14:00 WIB</p>
+                    <p class="event-loc">
+                      Bakmi Golk<br>
+                      Ball Room<br>
+                      <span class="map-link" onclick="window.open('https://maps.app.goo.gl/GgmjUKVHEWFMhPXk6', '_blank')">Location Map</span>
+                    </p>
+                    <div class="qr-placeholder">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://maps.app.goo.gl/GgmjUKVHEWFMhPXk6" alt="QR Lokasi">
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-sections">
+                <h3 class="serif-sub">Love Story</h3>
+                <p class="placeholder-text">[ Area Galeri Foto ]</p>
+                
+                <h3 class="serif-sub">Wedding Gift</h3>
+                <p class="placeholder-text">Wishes &amp; RSVP</p>
+                
+                <div class="rsvp-box">
+                    <p class="rsvp-label">Name</p>
+                    <div class="rsvp-line"></div>
+                </div>
+
+                <div class="closing-area">
+                    <p class="closing-label">Cordial Closing</p>
+                    <h2 class="footer-names">Firdan &amp; Cicilya</h2>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    </section>
+</div>
+
+<audio id="wedding-music" src="Happy Ending.mp3" loop></audio>
+
+<button id="music-control" class="music-btn" onclick="toggleMusic()">
+    <i id="music-icon" class="fas fa-music"></i>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
